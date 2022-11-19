@@ -41,10 +41,10 @@
                      ||                ||                  ||                 ||                ||
                      ||___________     ||___________       ||_____________    ||_____________   ||_____________ 
 
-     In this mode, the has three options of where the word comes from: i) Oxford 3500; ii) IELTS; iii) GRE, the above vocabularies are levels of words that corresponds with one's level of study, which are High School, Undergraduate and Postgraducate respectively. Under each vocabularies, the player can choose words of three different lengthes: i) 5 character-long; ii) 6 character-long; iii) 7 character-long. Once the player finishes choosing the vocabularies and length of the word, the guessing game begins!
+     In this mode, the player has three options of where the word comes from: i) Oxford 3500; ii) IELTS; iii) GRE, the above vocabularies are levels of words that corresponds with one's level of study, which are High School, Undergraduate and Postgraducate respectively. Under each vocabularies, the player can choose words of three different lengthes: i) 5 character-long; ii) 6 character-long; iii) 7 character-long. Once the player finishes choosing the vocabularies and length of the word, the guessing game begins!
 
-      i) Hint(?): Player has infinite chances of obtaining a hint, which will directly fill one character of the word in the blank, press "?" to do so. However, the player is not suggested to use too many of them unless he is at the edge of fruastration or has no clue of what the word could be.
-
+      i) Hint(?): Player has unlimited chances of obtaining a hint, which will directly fill one character of the word in the blank each time, press "?" to do so. However, the player is not suggested to use too many of them in order to keep the game being challenging.
+      
       ii) Quit(Q): The player can quit the game any time during the on-going round of guess, press "Q" to do so.
 
       iii) Return(R): Return to the Mainpage, but current game status will not be saved.
