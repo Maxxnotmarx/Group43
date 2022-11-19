@@ -24,16 +24,30 @@ This is a single-player game inspired by the world classic guessing game Hangman
 
   2) Classic Mode:
 
-     In each round of play, the player's goal is to correctly guess the word provided by the computer so as to save        the little man from being hanged to death, therefore, there are only two results at the end of each round: i)        One successfully comes up with the word and the little man is saved, aka "You Win"; ii) The player fails to          guess the word, and the little man is hanged, aka "You Lose".
+     In each round of play, the player's goal is to correctly guess the word provided by the computer so as to save the little man from being hanged to death, therefore, there are only two results at the end of each round: i) One successfully comes up with the word and the little man is saved, aka "You Win"; ii) The player fails to guess the word, and the little man is hanged, aka "You Lose".
 
-     In this mode, the has three options of where the word comes from: i) Oxford 3500; ii) IELTS; iii) GRE, the above      vocabularies are levels of words that corresponds with one's level of study, which are High School,                  Undergraduate and Postgraducate respectively. Under each vocabularies, the player can choose words of three          different lengthes: i) 5 character-long; ii) 6 character-long; iii) 7 character-long. Once the player finishes        choosing the vocabularies and length of the word, the guessing game begins!
+     In this mode, the has three options of where the word comes from: i) Oxford 3500; ii) IELTS; iii) GRE, the above vocabularies are levels of words that corresponds with one's level of study, which are High School, Undergraduate and Postgraducate respectively. Under each vocabularies, the player can choose words of three different lengthes: i) 5 character-long; ii) 6 character-long; iii) 7 character-long. Once the player finishes choosing the vocabularies and length of the word, the guessing game begins!
+     
+     Another thing worth mentioning is the drawing steps of the little man, every time the player guesses a wrong character, one penalty will be imposed.
+     
+                    0 Penalty(start)     1 Penalty           2 Panalties       3 Panalties      Panalties(lose)
+                     ______________    ______________      ______________     ______________    ______________
+                     ||     |          ||     |            ||     |           ||     |          ||      |
+                     ||                ||     0            ||     0           ||     0          ||      0
+                     ||                ||                  ||     "           ||     "          ||      "
+                     ||                ||                  ||                 ||    /|\         ||     /|\
+                     ||                ||                  ||                 ||                ||     / \
+                     ||                ||                  ||                 ||                ||
+                     ||                ||                  ||                 ||                ||
+                     ||                ||                  ||                 ||                ||
+                     ||___________     ||___________       ||_____________    ||_____________   ||_____________ 
 
-     i) Hint(?): Player has infinite chances of obtaining a hint, which will directly fill one character of the word      in the blank, press "?" to do so. However, the player is not suggested to use too many of them unless he is at        the edge of fruastration or has no clue of what the word could be.
+   i) Hint(?): Player has infinite chances of obtaining a hint, which will directly fill one character of the word in the blank, press "?" to do so. However, the player is not suggested to use too many of them unless he is at the edge of fruastration or has no clue of what the word could be.
 
-     ii) Quit(Q): The player can quit the game any time during the on-going round of guess, press "Q" to do so.
+   ii) Quit(Q): The player can quit the game any time during the on-going round of guess, press "Q" to do so.
 
-     iii) Return(R): Return to the Mainpage, but current game status will not be saved.
+   iii) Return(R): Return to the Mainpage, but current game status will not be saved.
 
-     iv) Guess(a-z): Guess should be inputted with lower case of the character.
+   iv) Guess(a-z): Guess should be inputted with lower case of the character.
 
-     v) Invalid Input: Any input that does not match with the above inputs of command.
+   v) Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
