@@ -2,9 +2,9 @@
 
 1. Group Members:
 
-  He Ziyi (3035864003)
-  Ma Xinyue (3035946198)
-  Zhou Zihan (3035947843)
+    He Ziyi (3035864003)
+    Ma Xinyue (3035946198)
+    Zhou Zihan (3035947843)
 
 2. Game Discirption:
 
@@ -42,12 +42,12 @@ This is a single-player game inspired by the world classic guessing game Hangman
                      ||                ||                  ||                 ||                ||
                      ||___________     ||___________       ||_____________    ||_____________   ||_____________ 
 
-   i) Hint(?): Player has infinite chances of obtaining a hint, which will directly fill one character of the word in the blank, press "?" to do so. However, the player is not suggested to use too many of them unless he is at the edge of fruastration or has no clue of what the word could be.
+      i) Hint(?): Player has infinite chances of obtaining a hint, which will directly fill one character of the word in the blank, press "?" to do so. However, the player is not suggested to use too many of them unless he is at the edge of fruastration or has no clue of what the word could be.
 
-   ii) Quit(Q): The player can quit the game any time during the on-going round of guess, press "Q" to do so.
+      ii) Quit(Q): The player can quit the game any time during the on-going round of guess, press "Q" to do so.
 
-   iii) Return(R): Return to the Mainpage, but current game status will not be saved.
+      iii) Return(R): Return to the Mainpage, but current game status will not be saved.
 
-   iv) Guess(a-z): Guess should be inputted with lower case of the character.
+      iv) Guess(a-z): Guess should be inputted with lower case of the character.
 
-   v) Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
+      v) Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
