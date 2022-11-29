@@ -102,9 +102,9 @@ Commands for lines of input:
     
     4) File input/output:
     
-    i) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
+    i) File Input: The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
     
-    ii) 
+    ii) File Output:
     
     5) Program codes in multiple files:
 
