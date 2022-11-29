@@ -9,7 +9,7 @@
 
 using namespace std;
 
-// Input a dictionary file, and return a random word in it
+// Input a dictionary .txt file, and return a word randomly selected from the dictionary file
 string RandomWord( string file ) {
 	int n, index, size = 0;
 	string word, word_in_random;
@@ -17,7 +17,8 @@ string RandomWord( string file ) {
 	ifstream dictionary;
 	dictionary.open( file.c_str() );
 	srand( time(0) );
-		
+	
+	// Read words as inputs from dictionary files 
 	while( dictionary >> word ) {
 		size++;
 		word_list.push_back( word ); // Append words in the file to the vector
