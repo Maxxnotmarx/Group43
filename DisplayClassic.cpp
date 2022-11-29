@@ -5,6 +5,13 @@
 
 using namespace std;
 
+// display_L1 function is the drawing hang man in the Classic Mode.
+// There are totally five input parameters, word, output, times, guess_blank and guessed.
+// String word is the word to be guessed; output is the figure of hang man; times is the wrong times that player has guessed;
+// guess_blank contains the characters that were guessed out and rest characters represented by '_';
+// guessed contains the wrong letters that have been guessed.
+// This function is a void function so no returned values. We directly print what we want in the function.
+
 void display_L1( string word, vector< string > output, int times, char guess_blank[], vector< char > guessed ) {
 	if ( times == 1 ) {
 		output[2] = "||     0   ";    // draw the head of the hang man
