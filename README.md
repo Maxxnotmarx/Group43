@@ -92,7 +92,9 @@ Commands for lines of input:
       
 4. Features(Coding Requirement):
     
-    1) Generation of random game sets:
+    1) Generation of random game sets: 
+    
+    The guessing word is randomly selected from a specific vocabulary. Take the Classic Mode for instance, the player can choose the vocabulary and the length of the word to guess with, but the generation of the word from that specific vocabulary is random, in which case he or she will not be able to immediately know what the next word excatly is before he or she starts to guess.
     
     2) Data structures for storing game status:
     
@@ -100,4 +102,10 @@ Commands for lines of input:
     
     4) File input/output:
     
+    i) The game is supported by 9 vocabularies accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player start a round of guess, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
+    
+    ii) 
+    
     5) Program codes in multiple files:
+
+    To improve the readabilty of the code and for a better code organization, feature functions are wirtten seperatedly. Since we have two modes of playing, the code of each mode are written seperately as functions to be called by the main function. And functions displaying the game status and functions generating a random word are also defined in seperate files from where they might be called. With feature functions defined seperately, one can call the function whenever and wherever he needs.
