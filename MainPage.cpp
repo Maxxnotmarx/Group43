@@ -7,13 +7,15 @@
 
 using namespace std;
 
+// MainPage function
 void MainPage(){
-	cout<<endl;
+	char input;
+	cout << endl;
+	cout << "                           Welcome to Hangman 2022                        " << endl;
 	cout << "   -------------------------------Main Page-------------------------------" << endl;
 	cout << "   _______________________________________________________________________" << endl;
     	cout << "   ************  M: menu; E: enter the game; Q: quit the game;  **********" << endl;
 	cout << "   -----------------------------------------------------------------------" << endl;
-	char input;
 	cout << "   ***********************************************************************" << endl;
 	cout << "   _______________________________________________________________________\n";
 	cout << "   ||                            /      				||\n";
@@ -30,12 +32,12 @@ void MainPage(){
 	cout << "   ***********************************************************************" << endl;
 	cout << "   =======================================================================" << endl;
 	cout << "Please input your choice: ";
-
+	
     	while( cin >> input ) {
 		if ( input == 'M' ) {
-		    	// cout Menu.txt
-		    	menu();
+		    	menu(); // Go to the menu function
 	    	}
+		
 		else if ( input == 'E' ) {
 			char mode;
 			
@@ -48,11 +50,11 @@ void MainPage(){
 				}
 
 		    		if ( mode == 'C' ) {
-			    		Classic();
+			    		Classic(); // Go to the Classic function
 		                	break;
 			    	}
 		    		else if ( mode == 'S' ) {
-				    	Scoring();
+				    	Scoring(); // Go to the Scoring function
         		        	break;
 		    		}
 
