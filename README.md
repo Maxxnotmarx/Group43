@@ -92,27 +92,27 @@ Commands for lines of input:
       
 4. Features(Coding Requirement):
     
-    1) Generation of random game sets: 
+    i. Generation of random game sets: 
     
     The guessing word is randomly selected from a specific dictionary. Take the Classic Mode for instance, the player can choose the vocabulary the word comes from and its length, but the selection of the word from that specific dictionary that the player choose is random, in which case he or she will not be able to predict what the next word is before he or she starts to guess.
     
-    2) Data structures for storing game status:
+    ii. Data structures for storing game status:
     
-    i) In DisplayScoring.cpp and DisplayClassic.cpp, integer times and vector output was used to store the game status by storing wrong times in the integer and the figure of the hang man in the vector. Once the wrong times increase by one, the integer times increase by one, and the vector will be updated the new figure of the hang man.
+    1) In DisplayScoring.cpp and DisplayClassic.cpp, integer times and vector output was used to store the game status by storing wrong times in the integer and the figure of the hang man in the vector. Once the wrong times increase by one, the integer times increase by one, and the vector will be updated the new figure of the hang man.
     
-    ii) In the scoring mode part, we also used a dynamic list to store the players' score to store the game status.
+    2) In the scoring mode part, we also used a dynamic list to store the players' score to store the game status.
     
-    3) Dynamic memory management:
+    iii. Dynamic memory management:
     
-    4) File input/output:
+    iv. File input/output:
     
     File Input: 
-    i) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
-    ii) In order to get the users' information in the scoring mode, we also used file input to read the User_Info.txt line by line and store the information in a dynamic list. Therefore, we can print out the ranking information while the player want to take a look.
+    1) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
+    2) In order to get the users' information in the scoring mode, we also used file input to read the User_Info.txt line by line and store the information in a dynamic list. Therefore, we can print out the ranking information while the player want to take a look.
     
     File Output:
     After playing the scoring mode game, the player has a new score if his score increased compared to his highest score, and we need to update his score, in the code, we store his new score in the dynamic list and finally output the content in the dynamic list to the User_Info.txt again to update the information of the players. At the same time, we store the rankings into the file.
     
-    5) Program codes in multiple files:
+    v. Program codes in multiple files:
 
     To improve the readabilty of the code and for a better code organization, feature functions are wirtten in separate files. Since we have two modes of playing, the code of each mode are written as functions in separate files. And functions displaying the game status and functions generating a random word are also defined in separate files. With feature functions defined seperately, the programmer can call the function whenever and wherever he needs.
