@@ -21,7 +21,7 @@ void Classic(){
 	string file, word;
 	bool quit = true;
 
-	// Declare the Vocabulary and Difficulty level the player want to play with
+	// Determine the Vocabulary and Difficulty level the player want to play with
 	cout << "________________________________________________________" << endl;
 	cout << "  Choose Vocabulary: O: Oxford 3500; I: IELTS; G: GRE   " << endl;
 	cout << "--------------------------------------------------------" << endl;
@@ -91,7 +91,7 @@ void Classic(){
 
 	word = RandomWord( file ); // Get the word of corresponding vocabulary and difficulty level
 
-	// The classic mode of game initiated
+	// The game starts
 	output.push_back( "____________" );
 	output.push_back( "||     |    " );
 	output.push_back( "||          " );
@@ -120,6 +120,8 @@ void Classic(){
 	
 
 	while ( quit && cin >> guess ){
+		
+		// Check if the input word is filled in the blank or not
 		for ( int i = 0; i < word.length(); i ++) {
 			if ( guess_blank[i] == guess ) {
 				cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
@@ -134,7 +136,7 @@ void Classic(){
 			break;
 		}
 		
-		// On-going round of guess
+		// On-going round of guessing
 		else if ( isalpha( guess ) || guess == '?' ) {
 
 			// Player requires to exit the game
@@ -144,6 +146,7 @@ void Classic(){
 				cout << "============" << endl;
 				exit(0);
     			}
+			
 			else if ( guess == 'R') {
 				MainPage();
                                 break;
@@ -256,14 +259,14 @@ void Classic(){
 			}
 			display_L1( word, output, times, guess_blank, guessed );
 		}
-		// 	Invalid input
+		// Invalid input
 		else {
 			cout << "_________________" << endl;
 			cout << "  Invalid input  " << endl;
 			cout << "_________________" << endl;
 		}
 
-		//	End of round
+		// End of round
 		if ( times == 4 ) {
 			cout << "________________________________________________________" << endl;
                         cout << "  Do you want to play for another round? No: N; Yes: Y  " << endl;
