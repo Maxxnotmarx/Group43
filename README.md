@@ -103,13 +103,14 @@ Commands for lines of input:
     
     3. Dynamic memory management:
     
-    Dynamic memory managemen is used in the ScoringMode.cpp. We created a dynamic array. Its purpose is to store user information, including username, maximum score, and password. When the player chooses to enter scoring mode to play the game, system will ask the player to enter a username, determine if the username exists, and if it does, ask for a password, and if it doesn't, create a new pointer to store the latest user's address. Whenever a new user registers for the scoring mode, the size of the dynamic array will be increased by one.
+    Dynamic memory managemen is used in the ScoringMode.cpp. We created a dynamic array called Playerlist. Its purpose is to store user information, including username, maximum score, and password. When the player chooses to enter scoring mode to play the game, system will ask the player to enter a username, determine if the username exists, and if it does, ask for a password, and if it doesn't, create a new pointer to store the latest user's address. Whenever a new user registers for the scoring mode, the size of the Playerlist will be increased by one, and store the new user information.
     
     4. File input/output:
     
     File Input: 
     a) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
-    b) In order to get the users' information in the scoring mode, we also used file input to read the User_Info.txt line by line and store the information in a dynamic list. Therefore, we can print out the ranking information while the player want to take a look.
+    b) i) In order to get the users' information in the scoring mode, we also used file input to read the User_Info.txt line by line and store the information in a dynamic list. Therefore, we can print out the ranking information while the player want to take a look.
+      ii) By use "getline()" and some calculations, we are able to extract the current number of players from User_Info.txt. We do this is to provide a initial size for the "Playerlist" which is the dynamic array we created. 
     
     File Output:
     After playing the scoring mode game, the player has a new score if his score increased compared to his highest score, and we need to update his score, in the code, we store his new score in the dynamic list and finally output the content in the dynamic list to the User_Info.txt again to update the information of the players. At the same time, we store the rankings into the file.
