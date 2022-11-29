@@ -5,6 +5,13 @@
 
 using namespace std;
 
+// display_Scoring function is the drawing hang man in the Scoring Mode.
+// There are totally five input parameters, word, output, times, guess_blank and wrong_letter.
+// String word is the word to be guessed; output is the figure of hang man; times is the wrong times that player has guessed;
+// guess_blank contains the characters that were guessed out and rest characters represented by '_';
+// wrong_letters contains the wrong letters that have been guessed.
+// This function is a void function so no returned values. We directly print what we want in the function.
+
 void display_Scoring( string word, vector< string > output, int times, char guess_blank[], vector< char > wrong_letter ) {
 	if ( times == 1 ) {
 		output[2] = "||     0                            ";    // draw the head of 'father'
