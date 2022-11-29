@@ -103,6 +103,8 @@ Commands for lines of input:
     
     3. Dynamic memory management:
     
+    Dynamic memory managemen is used in the ScoringMode.cpp. We created a dynamic array. Its purpose is to store user information, including username, maximum score, and password. When the player chooses to enter scoring mode to play the game, system will ask the player to enter a username, determine if the username exists, and if it does, ask for a password, and if it doesn't, create a new pointer to store the latest user's address. Whenever a new user registers for the scoring mode, the size of the dynamic array will be increased by one.
+    
     4. File input/output:
     
     File Input: 
