@@ -12,32 +12,21 @@ void menu() {
     cout << "   $$$$-$$$$-$$$$-$$$$----------RULES FOR CLASSIC MODEL---------$$$$-$$$$-$$$$-$$$$\n";
     cout << "   $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\n\n";
     
-    cout << "\t1. There will be number of blanks generated depending on the difficulty level.\n\n";
+    cout << "\t1. There will be number of blanks generated depending on the word length you choose.\n\n";
     cout << "\t2. Try to guess each letter of the word.\n\n";
     cout << "\t3. Each wrong guess displays the parts of the hangman.\n\n";
+    cout << "\t2. You can make total 4 wrong guesses.\n";
     cout << "\t4. When the hangman is fully drawn, YOUR LOSE!!.\n\n";
     cout << "\t5. You can get hints as many times as you need.\n\n";
     
     
-    cout << "\t5. There are THREE different dictionaries to choose:\n\n";
+    cout << "\t6. There are THREE different dictionaries to choose:\n\n";
     
     cout << "\t\t>OXFORD\n";
     cout << "\t\t>IELTS\n";
     cout << "\t\t>GRE\n\n";
     
     
-    cout << "\t6. There are THREE different dictionaries to choose:\n\n";
-    
-    cout << "\t\t> EASY MODE\n";
-    cout << "\t\t\t  > Words consist of FIVE letters\n";
-    
-    
-    cout << "\t\t> MEDIAM MODE\n";
-    cout << "\t\t\t  > Words consist of SIX letters\n";
-    
-    
-    cout << "\t\t> HARD MODE\n";
-    cout << "\t\t\t  > Words consist of SEVEN letters\n\n\n";
     
     cout<<"     ______________________________________________________________________\n";
     cout<<"     ||                            /      \n";
