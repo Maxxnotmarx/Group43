@@ -15,9 +15,9 @@ void menu() {
     cout << "\t1. There will be number of blanks generated depending on the word length you choose.\n\n";
     cout << "\t2. Try to guess each letter of the word.\n\n";
     cout << "\t3. Each wrong guess displays the parts of the hangman.\n\n";
-    cout << "\t2. You can make total 4 wrong guesses.\n";
-    cout << "\t4. When the hangman is fully drawn, YOUR LOSE!!.\n\n";
-    cout << "\t5. You can get hints as many times as you need.\n\n";
+    cout << "\t4. You can make total 4 wrong guesses.\n\n";
+    cout << "\t5. When the hangman is fully drawn, YOUR LOSE!!.\n\n";
+    cout << "\t6. You can get hints as many times as you need.\n\n";
     
     
     cout << "\t6. There are THREE different dictionaries to choose:\n\n";
