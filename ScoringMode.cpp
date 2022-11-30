@@ -149,7 +149,7 @@ void Scoring(){
 					
 					// ask the player to confirm passwords if the passwords are in proper type
 					if (player_password.length()==6&&player_password!="return"){
-						cout<<"oooooooooooooooooooooooooooo"<<endl;
+						cout<<"····························"<<endl;
 						cout<<"Please confirm your password"<<endl; //confirm
 	                                        cin>>temp_password;
 						cout<<endl;
