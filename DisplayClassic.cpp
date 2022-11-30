@@ -42,7 +42,7 @@ void display_L1( string word, vector< string > output, int times, char guess_bla
 	}
 	cout << endl;
 
-	cout << "Wrong guesses: ";
+	cout << "For this word, you have guessed: ";
 	for ( unsigned int i=0; i < guessed.size(); i++) {
 		cout << guessed[i] << " ";    // output the wrong guesses
 	}
