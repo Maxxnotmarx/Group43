@@ -325,9 +325,11 @@ void Scoring(){
 			    display_Scoring( output, times);
                     }
                     else{ //no chance for hint
+			cout<<endl;
                         cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
                         cout<<"$ Sorry, you do not have any hint anymore, please guess by your own. $"<<endl;
                         cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
+			cout<<endl;
                     }
                 }
                 // Player guesses the wrong character
@@ -344,9 +346,11 @@ void Scoring(){
 			display_Scoring( output, times);
                     }
                     else{
+			cout<<endl;
                         cout<<"==========================================="<<endl;
                         cout<<"You have already guessed this! It is wrong!"<<endl;
                         cout<<"==========================================="<<endl;
+			cout<<endl;
                     }
                 }
 
