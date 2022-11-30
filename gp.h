@@ -15,7 +15,7 @@ string RandomWord( string file );
 void display_L1( string word, vector< string > output, int times, char guess_blank[], vector< char > guessed );
 void MainPage();
 void Scoring();
-void display_Scoring( string word, vector< string > output, int times,char guess_blank[],vector< char > wrong_letter );
+void display_Scoring( vector< string > output, int times );
 void menu();
 
 #endif
