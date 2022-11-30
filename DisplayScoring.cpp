@@ -12,7 +12,7 @@ using namespace std;
 // wrong_letters contains the wrong letters that have been guessed.
 // This function is a void function so no returned values. We directly print what we want in the function.
 
-void display_Scoring( string word, vector< string > output, int times, char guess_blank[], vector< char > wrong_letter ) {
+void display_Scoring( vector< string > output, int times ) {
 	if ( times == 1 ) {
 		output[2] = "||     0                            ";    // draw the head of 'father'
 	}
@@ -122,16 +122,5 @@ void display_Scoring( string word, vector< string > output, int times, char gues
 	for ( int i = 0; i < 12; i++) {
         	cout << output[i] << endl;    // output the figure of the game status
     	}
-	cout<<endl;
-
-    	for ( int i = 0; i < word.length(); i++ ) {
-    		cout << guess_blank[i] << " ";  // output the guessed blank for the current word
-	}
-	cout << endl;
-
-	cout << "For this word, you have guessed: ";
-	for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
-		cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
-	}
-	cout << endl;			  
+	cout<<endl;			  
 }
