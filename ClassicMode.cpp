@@ -124,6 +124,7 @@ void Classic(){
 		// Check if the input word is filled in the blank or not
 		for ( int i = 0; i < word.length(); i ++) {
 			if ( guess_blank[i] == guess ) {
+				display_L1( word, output, times, guess_blank, guessed );
 				cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
 				cout << "  The character has been filled in the blank!  " << endl;
 				cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
@@ -173,6 +174,7 @@ void Classic(){
                 
                 			i+=1;
             			}
+				display_L1( word, output, times, guess_blank, guessed );
         		}	
 
 			// Player guesses the wrong character
@@ -188,6 +190,7 @@ void Classic(){
                                         guessed.push_back( guess );
                                 } 
 				else {
+					display_L1( word, output, times, guess_blank, guessed );
 					cout << "..............................................." << endl;
 					cout << "  You have already guessed this! It is wrong!  " << endl;
 					cout << "..............................................." << endl;
@@ -202,6 +205,7 @@ void Classic(){
 					guess_blank[pos] = word[pos];
 					pos = word.find( guess, pos+1);
 				}
+				display_L1( word, output, times, guess_blank, guessed );
 			}
 			
 			int count_space = 0;
@@ -257,7 +261,6 @@ void Classic(){
 					break;
 				}
 			}
-			display_L1( word, output, times, guess_blank, guessed );
 		}
 		// Invalid input
 		else {
