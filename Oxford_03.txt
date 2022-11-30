@@ -8,11 +8,9 @@ bicycle
 capital
 careful
 display
-donator
 edition
 element
 finance
-goodbye
 history
 hundred
 inquiry
