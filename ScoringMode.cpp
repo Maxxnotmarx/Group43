@@ -90,10 +90,10 @@ void Scoring(){
 				cout<<"Please input your password: "<<endl;
 				cout<<"----------------------------"<<endl;
 				check_password=true;
-				while(check_password){
+				while(check_password){ //input the password
 	                                cin>>player_password;
         	                        
-                	                if (player_password=="return"){
+                	                if (player_password=="return"){//will return to input username step
                         	                check_password=false;
 						inner=false;
 						search_name=false;
@@ -108,7 +108,7 @@ void Scoring(){
 						inner=false;
 						outer=false;
 						cout<<"**********************"<<endl;
-                        	                cout<<"Your current highest score is "<<player_score<<endl;
+                        	                cout<<"Your current highest score is "<<player_score<<endl; //display current score
 						cout<<"----------------------------------"<<endl;
                                 	}
 					
@@ -150,7 +150,7 @@ void Scoring(){
 					// ask the player to confirm passwords if the passwords are in proper type
 					if (player_password.length()==6&&player_password!="return"){
 						cout<<"oooooooooooooooooooooooooooo"<<endl;
-						cout<<"Please confirm your password"<<endl;
+						cout<<"Please confirm your password"<<endl; //confirm
 	                                        cin>>temp_password;
 						cout<<endl;
 						
@@ -161,21 +161,21 @@ void Scoring(){
                         	                        check_password=false;
 							
 							// insert a new struct(representing the new player's account information) into the dynamic array
-                                	                Player *temp=new Player[size];
+                                	                Player *temp=new Player[size]; //copy all the current user information to the temp dynamic array
                                         	        for (int i=0;i<size;i++){
                                                 	        temp[i]=playerList[i];
 	                                                }
-        	                                        delete []playerList;
-                	                                playerList= new Player[size+1];
-                        	                        for (int i=0;i<size;i++){
+        	                                        delete []playerList; //delete the original playerList dynamic array
+                	                                playerList= new Player[size+1]; //create a new dynamic array with one more size, in order to add the new user to our user information
+                        	                        for (int i=0;i<size;i++){ //add all current user to our current playerList dynamic array
                                 	                       playerList[i]=temp[i];
                                         	        }
-                                                	delete []temp;
+                                                	delete []temp; //delete the temp dynamic array
 
-	                                                playerList[size].name=player_name;
+	                                                playerList[size].name=player_name;//add the new user to the current dynamic array
         	                                        playerList[size].password=player_password;
                 	                                playerList[size].score=0;
-                        	                        size++;
+                        	                        size++;//size+1
 							inner=false;
                                         	        outer=false;
 							player_index=size;
@@ -478,8 +478,7 @@ void Scoring(){
 		
 		// if the player wants to see the ranking
 		if (see_ranking=='1'){
-			Player *playerList_ranked;  // create a dynamic array called different name but with the same content
-			playerList_ranked=playerList;
+			Player *playerList_ranked =playerList;// create a dynamic array called different name but with the same content
 			cout<<"------------------Ranking------------------"<<endl;
 			
 			// use bubble sort to sort the players according to their scores from high to low
