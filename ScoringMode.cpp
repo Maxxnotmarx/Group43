@@ -281,13 +281,6 @@ void Scoring(){
         // guess
         while(cin>>guess){
 	    //determine whether the correct letter is already guessed before
-	    for ( int i = 0; i < word.length(); i ++) { 
-                        if ( guess_blank[i] == guess ) {
-                                cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-                                cout << "  The character has been filled in the blank!  " << endl;
-                                cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-                        }
-            }
             if ( guess == 'R'){ // return to the mainpage
                 MainPage();
                 break;
@@ -322,14 +315,24 @@ void Scoring(){
                             }
                             i+=1;
                         }
-			    display_Scoring( output, times);
+			            display_Scoring( output, times);
+                        for ( int i = 0; i < word.length(); i++ ) {
+      			            cout << guess_blank[i] << " ";  // output the guessed blank for the current word
+ 		                }
+ 		                cout << endl;
+
+ 		                cout << "For this word, you have guessed: ";
+ 	    	            for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
+      			            cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
+ 		                }
+ 		                cout << endl;
                     }
                     else{ //no chance for hint
-			cout<<endl;
+                        cout<<endl;
                         cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
                         cout<<"$ Sorry, you do not have any hint anymore, please guess by your own. $"<<endl;
                         cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
-			cout<<endl;
+                        cout<<endl;
                     }
                 }
                 // Player guesses the wrong character
@@ -343,40 +346,61 @@ void Scoring(){
                     if (count_number_of_guessed==0){ //no wrong guess for this letter before, wrong guess +1
                         times++;
                         wrong_letter.push_back(guess); //store the wrong guess
-			display_Scoring( output, times);
+			            display_Scoring( output, times);
+                        for ( int i = 0; i < word.length(); i++ ) {
+      			            cout << guess_blank[i] << " ";  // output the guessed blank for the current word
+ 		                }
+ 		                cout << endl;
+
+ 		                cout << "For this word, you have guessed: ";
+ 	    	            for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
+      			            cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
+ 		                }
+ 		                cout << endl;
                     }
                     else{
-			cout<<endl;
+                        cout<<endl;
                         cout<<"==========================================="<<endl;
                         cout<<"You have already guessed this! It is wrong!"<<endl;
                         cout<<"==========================================="<<endl;
-			cout<<endl;
+                        cout<<endl;
                     }
                 }
-
 
                 // Player guesses the right character
                 else{
                     int pos;
+                    int foundINblank = 0;
+                    for ( int i = 0; i < word.length(); i ++) { 
+                        if ( guess_blank[i] == guess ) {
+                            foundINblank += 1;
+                        }
+                    }
                     pos = word.find( guess ); //find position 
                     while( pos != -1){//position found
-                        score+=3; //score +3
-                        guess_blank[pos] = word[pos];//fill the blank
-                        pos = word.find( guess, pos+1); //repeat to check duplicate letter, fill them all
+                            score+=3; //score +3
+                            guess_blank[pos] = word[pos];//fill the blank
+                            pos = word.find( guess, pos+1); //repeat to check duplicate letter, fill them all
                     }
 		    display_Scoring( output, times);
+                    for ( int i = 0; i < word.length(); i++ ) {
+      			        cout << guess_blank[i] << " ";  // output the guessed blank for the current word
+ 		            }
+ 		            cout << endl;
+
+ 		            cout << "For this word, you have guessed: ";
+ 		            for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
+  			            cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
+ 		            }
+ 		            cout << endl;
+                    
+                    if (foundINblank != 0){
+                        cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+                        cout << "  The character has been filled in the blank!  " << endl;
+                        cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+                    }
                 }
 		
-		for ( int i = 0; i < word.length(); i++ ) {
-      			cout << guess_blank[i] << " ";  // output the guessed blank for the current word
- 		}
- 		cout << endl;
-
- 		cout << "For this word, you have guessed: ";
- 		for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
-  			cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
- 		}
- 		cout << endl;
 
                 //check complete
                 int count_space=0;
