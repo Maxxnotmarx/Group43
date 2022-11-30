@@ -121,15 +121,6 @@ void Classic(){
 
 	while ( quit && cin >> guess ){
 		
-		// Check if the input word is filled in the blank or not
-		for ( int i = 0; i < word.length(); i ++) {
-			if ( guess_blank[i] == guess ) {
-				cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-				cout << "  The character has been filled in the blank!  " << endl;
-				cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
-			}
-		}
-
 		// Return to Mainpage
 		if ( guess == 'R') {
 			MainPage();
@@ -186,7 +177,7 @@ void Classic(){
                                 if ( count_number_of_guessed == 0 ) {
                                         times++;
                                         guessed.push_back( guess );
-					display_L1( word, output, times,  guess_balnk, guessed );
+					display_L1( word, output, times,  guess_blank, guessed );
                                 } 
 				else {
 					display_L1( word, output, times, guess_blank, guessed );
@@ -198,6 +189,13 @@ void Classic(){
 
 			// Player guesses the right character
 			else{
+				// Check if the input word is filled in the blank or not
+				int foundINblank=0;
+				for ( int i = 0; i < word.length(); i ++) {
+					if ( guess_blank[i] == guess ) {
+						foundINblank += 1;
+					}
+				}
 				int pos;
 				pos = word.find( guess );
 				while ( pos != -1 ) {
@@ -205,6 +203,11 @@ void Classic(){
 					pos = word.find( guess, pos+1);
 				}
 				display_L1( word, output, times, guess_blank, guessed );
+				if (foundINblank!=0){
+					cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+					cout << "  The character has been filled in the blank!  " << endl;
+					cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
+				}
 			}
 			
 			int count_space = 0;
