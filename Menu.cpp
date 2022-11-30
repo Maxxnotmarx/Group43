@@ -30,17 +30,14 @@ void menu() {
     
     cout << "\t\t> EASY MODE\n";
     cout << "\t\t\t  > Words consist of FIVE letters\n";
-    cout << "\t\t\t  > FOUR wrong guesses are allowed before finding the correct answer.\n\n";
     
     
     cout << "\t\t> MEDIAM MODE\n";
     cout << "\t\t\t  > Words consist of SIX letters\n";
-    cout << "\t\t\t  > FIVE wrong guesses are allowed before finding the correct answer.\n\n";
     
     
     cout << "\t\t> HARD MODE\n";
-    cout << "\t\t\t  > Words consist of SEVEN letters\n";
-    cout << "\t\t\t  > SIX wrong guesses are allowed before finding the correct answer.\n\n\n";
+    cout << "\t\t\t  > Words consist of SEVEN letters\n\n\n";
     
     cout<<"     ______________________________________________________________________\n";
     cout<<"     ||                            /      \n";
