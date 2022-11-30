@@ -8,7 +8,6 @@
 using namespace std;
 
 // make up a structure to store the information of the users
-
 struct Player{
 	string name;
 	string password;
@@ -16,6 +15,7 @@ struct Player{
 
 };
 
+// enter the scoring mode, no paramter input
 void Scoring(){
     
 	Player *playerList;    // create a dynamic array to store the information of the players
@@ -85,7 +85,7 @@ void Scoring(){
 			
                         if (search_name){    // if the name was found to be set before, we need to check his password to confirm that this is his account
 				cout<<"This username is being created before, if this is your account please enter the password."<<endl;
-				cout<<"If this is not your account, please enter \"return\" to input a new username again.";
+				cout<<"If this is not your account, please enter \"return\" to input a new username again."<<endl;
 				cout<<"----------------------------"<<endl;
 				cout<<"Please input your password: "<<endl;
 				cout<<"----------------------------"<<endl;
@@ -322,6 +322,7 @@ void Scoring(){
                             }
                             i+=1;
                         }
+			    display_Scoring( output, times);
                     }
                     else{ //no chance for hint
                         cout<<"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$"<<endl;
@@ -340,6 +341,7 @@ void Scoring(){
                     if (count_number_of_guessed==0){ //no wrong guess for this letter before, wrong guess +1
                         times++;
                         wrong_letter.push_back(guess); //store the wrong guess
+			display_Scoring( output, times);
                     }
                     else{
                         cout<<"==========================================="<<endl;
@@ -358,9 +360,8 @@ void Scoring(){
                         guess_blank[pos] = word[pos];//fill the blank
                         pos = word.find( guess, pos+1); //repeat to check duplicate letter, fill them all
                     }
+		    display_Scoring( output, times);
                 }
-
-                display_Scoring( output, times); //display the hangman every single turn
 		
 		for ( int i = 0; i < word.length(); i++ ) {
       			cout << guess_blank[i] << " ";  // output the guessed blank for the current word
@@ -389,6 +390,9 @@ void Scoring(){
                     wrong_letter.clear(); //clear all the wrong letter stored in this word, ready for the next word
 
                     score+=2; // additional 2 score is added
+			
+		    display_Scoring (output, times);
+			
 		    cout<<endl;
                     cout<<"* The word you guessed correct is: "<<word<<"."<<endl;
                     cout<<"* Your current score is: "<<score<<"."<<endl;
@@ -396,9 +400,8 @@ void Scoring(){
                     cout<<"* You still have "<<num_hint<<" hints can be used"<<"."<<endl;
                     cout<<"* Now you can guess the next word! Good luck!"<<endl;
 		    cout<<endl;
-		    
-		    display_Scoring( output, times );
-			
+		    		    
+	    	    cout<<" New Word: "<<endl;
 		    if (word.length()==5){ //display blanks
 			    cout<<"_ _ _ _ _ _"<<endl;
 		    } else if(word.length()==6){
