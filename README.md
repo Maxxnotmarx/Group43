@@ -94,7 +94,7 @@ Commands for lines of input:
     
     1. Generation of random game sets: 
     
-    The guessing word is randomly selected from a specific dictionary. Take the Classic Mode for instance, the player can choose the vocabulary the word comes from and its length, but the selection of the word from that specific dictionary that the player choose is random, in which case he or she will not be able to predict what the next word is before he or she starts to guess.
+    The guessing word is randomly selected from a specific dictionary. Take the Classic Mode for instance, the player can choose the vocabulary the word comes from and its length, but the selection of the word from that specific dictionary that the player choose is random, in which case he or she will not be able to predict what the next word is before he or she starts to guess. The generation of random word is achieved by defining the RandomWord() function in RandomWord.cpp.
     
     2. Data structures for storing game status:
     
@@ -108,7 +108,7 @@ Commands for lines of input:
     4. File input/output:
     
     File Input: 
-    a) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
+    a) The game is supported by 9 dictionaries accroding to the level of study and the word length, thus we seprate all potential words that the player might encounter into 9 .txt files. In the RandomWord.cpp, everytime the player choose the dictionary to guess with, the program will read the specific .txt file and store them in a vector, then a random word will be selected from that vector using the RandomWord() function. With words seperately stored in different files, it is easier and clearer of what to do if one want to add more words supply to the game.
     b) i) In order to get the users' information in the scoring mode, we also used file input to read the User_Info.txt line by line and store the information in a dynamic list. Therefore, we can print out the ranking information while the player want to take a look.
       ii) By use "getline()" and some calculations, we are able to extract the current number of players from User_Info.txt. We do this is to provide a initial size for the "Playerlist" which is the dynamic array we created. 
     
