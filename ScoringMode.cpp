@@ -7,6 +7,8 @@
 
 using namespace std;
 
+// make up a structure to store the information of the users
+
 struct Player{
 	string name;
 	string password;
@@ -16,39 +18,40 @@ struct Player{
 
 void Scoring(){
     
-	Player *playerList;
+	Player *playerList;    // create a dynamic array to store the information of the players
 
-        string player_name, player_password;
-        int player_score, wrong_time=0, size=5, player_index;
-        bool outer=true, inner=true, search_name=false, check_password=false;
+        string player_name, player_password;    // declare the information type
+        int player_score, wrong_time=0, size=3, player_index;    // initialize the wrong times as 0 and size equals to 3 since we only have 3 players' information now
+        bool outer=true, inner=true, search_name=false, check_password=false;    // set up some booleans to jump out of loops later
 
 
 	ifstream fin1;
-	fin1.open("User_Info.txt");
+	fin1.open("User_Info.txt");    // open the User_Info.txt file to read in players' information
 	
 	string line;
 	int num_user=0;
 	while (getline(fin1,line)){
-		num_user+=1;
+		num_user+=1;    // count the number of players
 	}
-	size=num_user;
+	size=num_user;    // make the size equals to the number of players
 	fin1.close();
 
-	playerList = new Player[size];	
+	playerList = new Player[size];    // set the dynamic array
 
-	int current_score=0,i=0;
+	int current_score=0,i=0;    // initial the score
 
 	ifstream fin2;
 	fin2.open("User_Info.txt");
+	
+	// read the players' information and store them into the dynamic array
 	while(getline(fin2,line)){
 		string name,password;
 		int current_score;
 		int index1,index2;
 
-		//cout<<line<<endl;
 		index1=line.find(';');
 		index2=line.find('|');
-		//cout<<index1<<" "<<index2<<endl;
+
 		name=line.substr(0,index1);
 		password=line.substr(index1+1,6);
 		current_score=stoi(line.substr(index2+1,line.length()-index2-1));
@@ -67,20 +70,23 @@ void Scoring(){
                 wrong_time=0;
 		search_name=false;
 		cout<<"======================"<<endl;
-                cout<<"Please input your name"<<endl;
+                cout<<"Please input your name"<<endl;    // ask the player to input the name
 		cout<<"======================"<<endl;
                 cout<<"If you input the wrong name, you can press \"return\" to jump back"<<endl;
 		cout<<"# Note that \"return\" is not a valid name!"<<endl;
                 while(inner){
                         cin>>player_name;
 			cout<<endl;
+			
+			// search the name and determine whethter there already exist such player
                         for (int i=0; i<size; i++){
                                 if (playerList[i].name == player_name){
                                         search_name=true;
                                         player_index=i;
                                 }
                         }
-                        if (search_name){
+			
+                        if (search_name){    // if the name was found to be set before, we need to check his password to confirm that this is his account
 				cout<<"This username is being created before, if this is your account please enter the password."<<endl;
 				cout<<"If this is not your account, please enter \"return\" to input a new username again.";
 				cout<<"----------------------------"<<endl;
@@ -95,7 +101,8 @@ void Scoring(){
 						inner=false;
 						search_name=false;
                                 	}
-
+					
+					// if the password is true and we know that this is his account
 	                                if (playerList[player_index].password==player_password){
 						cout<<"**********************"<<endl;
 						cout<<"Welcome back! "<<player_name<<endl;
@@ -107,13 +114,16 @@ void Scoring(){
                         	                cout<<"Your current highest score is "<<player_score<<endl;
 						cout<<"----------------------------------"<<endl;
                                 	}
+					
+					// if the password is wrong, we need to remind him about this and tell him how many times of inputting passwords left
 	                                else {
         	                                wrong_time+=1;
 						cout<<"HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"<<endl;
                 	                        cout<<"Wrong Password! You have "<<3-wrong_time<<" times to input your password."<<endl;
 						cout<<"HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"<<endl;
                         	        }
-
+					
+					// if the maximum of wrong times was reached, we jumpy back to the step of inputting name
                                 	if (wrong_time==3){
                                         	cout<<"You have input 3 times of wrong password!"<<endl;
 	                                        cout<<"We will jump to the first step!"<<endl;
@@ -124,7 +134,9 @@ void Scoring(){
                 	                }
                         	}
 			}
-                        else {          //insertion
+			
+			// if the name was not created before, we let the player create an account and set his passwords and store them into the dynamic array
+                        else {
                                 string temp_password;
                                 check_password=true;
 				
@@ -137,15 +149,21 @@ void Scoring(){
 
                                 while(check_password){
                                         cin>>player_password;
+					
+					// ask the player to confirm passwords if the passwords are in proper type
 					if (player_password.length()==6&&player_password!="return"){
 						cout<<"oooooooooooooooooooooooooooo"<<endl;
 						cout<<"Please confirm your password"<<endl;
 	                                        cin>>temp_password;
 						cout<<endl;
+						
+						// if the confirm is right, the password was set up successfully, and so the account was created successfully
         	                                if (temp_password==player_password){
                 	                                cout<<"Password set successfully!"<<endl;
 							cout<<"**************************"<<endl;
                         	                        check_password=false;
+							
+							// insert a new struct(representing the new player's account information) into the dynamic array
                                 	                Player *temp=new Player[size];
                                         	        for (int i=0;i<size;i++){
                                                 	        temp[i]=playerList[i];
@@ -195,9 +213,10 @@ void Scoring(){
     string word,file;
 
     vector <string> guessed_words;
-
+	
+    // create a vecotr to store the figure of hang man
     vector <char> wrong_letter;
-
+    // initialize the game status
     vector< string > output;
     output.push_back("___________________________________ ");
     output.push_back("||     |          |          |      ");
@@ -212,6 +231,7 @@ void Scoring(){
     output.push_back("||                                  ");
     output.push_back("||__________________________________");
 
+    // first print out the shape of the shelf
     for (int i=0;i<output.size();i++){
         cout <<output[i]<<endl;
     }
@@ -222,7 +242,7 @@ void Scoring(){
 
 
     while(times<15){
-        //determine word
+        // determine word
         if (choose_word%9==0){
             file = "Oxford_01.txt";
             word = RandomWord(file); 
@@ -235,7 +255,6 @@ void Scoring(){
             file = "Oxford_03.txt";
             word = RandomWord(file);
         }
-
         else if (choose_word%9==3){
             file = "IELTS_01.txt";
             word = RandomWord(file);
@@ -265,9 +284,10 @@ void Scoring(){
 
 
 
-        //guess
+        // guess
         while(cin>>guess){
-	    for ( int i = 0; i < word.length(); i ++) { //determine whether the correct letter is already guessed before
+	    //determine whether the correct letter is already guessed before
+	    for ( int i = 0; i < word.length(); i ++) { 
                         if ( guess_blank[i] == guess ) {
                                 cout << "+++++++++++++++++++++++++++++++++++++++++++++++" << endl;
                                 cout << "  The character has been filled in the blank!  " << endl;
@@ -348,8 +368,18 @@ void Scoring(){
                     }
                 }
 
-                display_Scoring( word, output, times, guess_blank, wrong_letter); //display the hangman every single turn
+                display_Scoring( output, times); //display the hangman every single turn
+		
+		for ( int i = 0; i < word.length(); i++ ) {
+      			cout << guess_blank[i] << " ";  // output the guessed blank for the current word
+ 		}
+ 		cout << endl;
 
+ 		cout << "For this word, you have guessed: ";
+ 		for ( unsigned int i = 0; i < wrong_letter.size(); i++ ) {
+  			cout << wrong_letter[i] << " ";    // output the wrong letters that have been guessed for this word
+ 		}
+ 		cout << endl;
 
                 //check complete
                 int count_space=0;
@@ -374,18 +404,18 @@ void Scoring(){
                     cout<<"* You still have "<<num_hint<<" hints can be used"<<"."<<endl;
                     cout<<"* Now you can guess the next word! Good luck!"<<endl;
 		    cout<<endl;
-		    for (int i=0;i<output.size();i++){
-		    	cout<<output[i]<<endl;
-		}
-			if (word.length()==5){ //display blanks
-				cout<<"_ _ _ _ _ _"<<endl;
-			} else if(word.length()==6){
-				cout<<"_ _ _ _ _ _ _"<<endl;
-			}
-			else{
-				cout<<"_ _ _ _ _"<<endl;
-			}
-		break;
+		    
+		    display_Scoring( output, times );
+			
+		    if (word.length()==5){ //display blanks
+			    cout<<"_ _ _ _ _ _"<<endl;
+		    } else if(word.length()==6){
+			    cout<<"_ _ _ _ _ _ _"<<endl;
+		    }
+		    else{
+			    cout<<"_ _ _ _ _"<<endl;
+		    }
+		    break;
                 }
             }
 
@@ -423,10 +453,14 @@ void Scoring(){
 		int temp;
 		cout<<"Do you want to see the ranking? 1: yes; 0: no "<<endl;
 		cin>>see_ranking;
+		
+		// if the player wants to see the ranking
 		if (see_ranking=='1'){
-			Player *playerList_ranked;
+			Player *playerList_ranked;  // create a dynamic array called different name but with the same content
 			playerList_ranked=playerList;
 			cout<<"------------------Ranking------------------"<<endl;
+			
+			// use bubble sort to sort the players according to their scores from high to low
 			for (int i=0;i<size-1;i++){
 				for (int j=0;j<size-1-i;j++){
 					if (playerList_ranked[j].score<playerList_ranked[j+1].score){
@@ -443,6 +477,7 @@ void Scoring(){
 				}
 			}
 			
+			// output the ranking
 			for (int z=0;z<size;z++){
 				cout<<playerList_ranked[z].name<<":"<<playerList_ranked[z].score<<endl;
 			}
@@ -456,24 +491,17 @@ void Scoring(){
 			cout<<"Bye bye!"<<endl;
 		}
 
+		// store the new information into the User_Info.txt
 		ofstream fout;
 		fout.open("User_Info.txt");
 		for (int z=0;z<size;z++){
-/*			if (playerList[z].name=player_name){
-				playerList[z].score=score;
-			}*/
 			fout<<playerList[z].name<<";"<<playerList[z].password<<"|"<<playerList[z].score<<endl;
 		}
 		fout.close();
 		delete [] playerList;
-
-
+		    
                 break; //game over
             }
-
         }
-
     }
-
-
 }
