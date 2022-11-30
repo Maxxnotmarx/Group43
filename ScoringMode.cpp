@@ -62,9 +62,6 @@ void Scoring(){
 	}
 	fin2.close();
 
-
-
-
         while (outer) {
                 inner=true;
                 wrong_time=0;
@@ -204,18 +201,16 @@ void Scoring(){
 	cout << "#######################################" << endl;
         cout << "###  Welcome to the Hangman 2022 !  ###" <<endl;
         cout << "#######################################" << endl;
-
+	
 
     char voca, guess, guess_blank[] = {'_', '_', '_', '_', '_', '_', '_'};
-
     int num_hint=5,times=0,choose_word=0, score=0;
-
     string word,file;
-
     vector <string> guessed_words;
 	
     // create a vecotr to store the figure of hang man
     vector <char> wrong_letter;
+	
     // initialize the game status
     vector< string > output;
     output.push_back("___________________________________ ");
@@ -283,7 +278,6 @@ void Scoring(){
         choose_word+=1;
 
 
-
         // guess
         while(cin>>guess){
 	    //determine whether the correct letter is already guessed before
@@ -326,7 +320,6 @@ void Scoring(){
                                     }
                                 }
                             }
-
                             i+=1;
                         }
                     }
@@ -352,7 +345,6 @@ void Scoring(){
                         cout<<"==========================================="<<endl;
                         cout<<"You have already guessed this! It is wrong!"<<endl;
                         cout<<"==========================================="<<endl;
-
                     }
                 }
 
@@ -434,7 +426,6 @@ void Scoring(){
                 cout<<"· The right word is: "<<word<<endl; //show the player what the last unguessed word is
                 cout<<"· Your score is: "<<score<<endl; //display the score
                 cout<<"· The words you have guessed out were: "<<endl;
-
 		    
                 for (int i5=0; i5<guessed_words.size(); i5++){//display the words user guessed out
                     cout<<"     "<<guessed_words[i5]<<endl;
