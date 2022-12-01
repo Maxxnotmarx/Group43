@@ -181,6 +181,7 @@ void Scoring(){
 						else if (temp_password=="return"){
                 	    				inner=false;
                         				check_password=false;
+						}
                         			else {
 							cout<<"HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH"<<endl;
         	                    			cout<<"The password was different from the one you set just now! Please set again!"<<endl;
