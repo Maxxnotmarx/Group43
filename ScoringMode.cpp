@@ -501,10 +501,32 @@ void Scoring(){
 		    	        cout<<playerList_ranked[z].name<<":"<<playerList_ranked[z].score<<endl;
 		        }
 		        cout<<endl;
-		        cout<<"***********************"<<endl;
-                    	cout<<"*** End of the game ***"<<endl;
-			cout<<"***     Bye bye!    ***"<<endl;
-			cout<<"***********************"<<endl;
+		        cout<<"*************************"<<endl;
+                    	cout<<"*** End of this round ***"<<endl;
+			cout<<"*************************"<<endl;
+			
+			char whether_to_play_again;
+			cout << "_________________________________________________________" << endl;
+		        cout << "   Do you want to play for another round? Y: Yes N: No   " << endl;
+			cout << "_________________________________________________________" << endl;
+			cin >> whether_to_play_again;
+				
+			if ( whether_to_play_again == 'Y' ) {
+				MainPage();
+				break;
+			}
+			else if ( whether_to_play_again == 'N' ) {
+				cout << "============" << endl;
+				cout << "  Bye Bye!  " << endl;
+				cout << "============" << endl;
+				break;
+			}
+			else {
+				cout << "===========================" << endl;
+				cout << "  Invalid Input, Bye Bye!  " << endl;
+				cout << "===========================" << endl;
+				break;
+			}
 		}
 	        else{
                 	cout<<"Bye bye!"<<endl;
