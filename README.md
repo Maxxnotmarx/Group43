@@ -8,7 +8,7 @@
 
 ## Game Discirption:
 
-    This is a single-player game inspired by the world classic guessing game Hangman (For reference: https://en.wikipedia.org/wiki/Hangman_(game)), in which there are two parties playing, the one who gives out the word is the computer, and the one who guesses the word is the human player. We have 2 different modes of playing that one can choose to play with: 1) Classic Mode and 2) Scoring Mode.
+   This is a single-player game inspired by the world classic guessing game Hangman (For reference: https://en.wikipedia.org/wiki/Hangman_(game)), in which there are two parties playing, the one who gives out the word is the computer, and the one who guesses the word is the human player. We have 2 different modes of playing that one can choose to play with: 1) Classic Mode and 2) Scoring Mode.
 
 3. Game Rules:
 
