@@ -40,7 +40,7 @@ void MainPage(){
 		else if ( input == 'E' ) {
 			char mode;
 			
-			cout << "mode: C: classic; S: scoring" << endl;
+			cout << "Mode: C: classic; S: scoring" << endl;
 
 			while( cin >> mode ) {
 				if ( mode == 'Q' ) {
