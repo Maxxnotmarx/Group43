@@ -1,6 +1,6 @@
-# Group43
+## Group43
 
-1. Group Members:
+    Group Members:
 
     He Ziyi (3035864003)
     Ma Xinyue (3035946198)
