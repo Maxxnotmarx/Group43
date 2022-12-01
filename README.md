@@ -113,7 +113,7 @@
     
   1. Generation of random game sets: 
   
-  - The words to be guessed in each round of the game are randomly generated from our [dictionary].txt by the RandomWord.cpp
+  - The words to be guessed in each round of the game are randomly generated from our `[dictionary].txt` by the `RandomWord.cpp`
   
    2. Data structures for storing game status:
    
