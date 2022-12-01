@@ -16,11 +16,11 @@
 
       A main page with the following functions:
 
-      i) Menu(M): Check game rules inside the game.
+         Menu(M): Check game rules inside the game.
 
-      ii) Enter(E): Enter the game, followed by the options of game mode.
+         Enter(E): Enter the game, followed by the options of game mode.
 
-      iii) Quit(Q): Quit the game/ End the running program.
+         Quit(Q): Quit the game/ End the running program.
 
   
   2) Classic Mode:
@@ -58,15 +58,15 @@
 
 Commands for lines of input:
 
-      i) Hint(?): Player has unlimited chances of obtaining a hint, which will directly fill one character of the word in the blank each time, press "?" to do so. However, the player is not suggested to use too many of them in order to keep the game challenging.
+      Hint(?): Player has unlimited chances of obtaining a hint, which will directly fill one character of the word in the blank each time, press "?" to do so. However, the player is not suggested to use too many of them in order to keep the game challenging.
       
-      ii) Quit(Q): Quit the game any time during the on-going round of guess
+      Quit(Q): Quit the game any time during the on-going round of guess
 
-      iii) Return(R): Return to the Mainpage, current game status will not be saved.
+      Return(R): Return to the Mainpage, current game status will not be saved.
 
-      iv) Guess(a-z): Guess should be inputted with lower case of the character.
+      Guess(a-z): Guess should be inputted with lower case of the character.
 
-      v) Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
+      Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
       
    
    3) Scoring Mode:
@@ -126,32 +126,30 @@ Commands for lines of input:
     
    4. File input/output:
     
-   File Input: 
-   - In scoring mode. Before the game begin, we input all information stored in `User_Info txt` to `Playerlist`
+   - File Input: In scoring mode. Before the game begin, we input all information stored in `User_Info txt` to `Playerlist`
     
-   File Output:
-   - In scoring mode. After the game is over, the `Playerlist` will be updated automatically with the name, password current highest score. All the records will be saved in `User_Info txt`. 
+   - File Output: In scoring mode. After the game is over, the `Playerlist` will be updated automatically with the name, password current highest score. All the records will be saved in `User_Info txt`. 
     
    5. Program codes in multiple files:
-     - `gp.h`: 
-     - `main.cpp`: 
-     - `MainPage.cpp`: 
-     - `ClassicMode.cpp`: 
-     - `ScoringMode.cpp`: 
-     - `DisplayClassic.cpp`: 
-     - `DisplayScoring.cpp`: 
-     - `Menu.cpp`:
-     - `RandomWord.cpp`:
-     - `Oxford_01.txt`: 
-     - `Oxford_02.txt`: 
-     - `Oxford_03.txt`: 
-     - `IELTS_01.txt`:
-     - `IELTS_02.txt`:
-     - `IELTS_03.txt`:
-     - `GRE_01.txt`:
-     - `GRE_02.txt`:
-     - `GRE_03.txt`:
-     - `User_Info.txt`:
+     -  `gp.h`: 
+     -  `main.cpp`: 
+     -  `MainPage.cpp`: 
+     -  `ClassicMode.cpp`: 
+     -  `ScoringMode.cpp`: 
+     -  `DisplayClassic.cpp`: 
+     -  `DisplayScoring.cpp`: 
+     -  `Menu.cpp`:
+     -  `RandomWord.cpp`:
+     -  `Oxford_01.txt`: 
+     -  `Oxford_02.txt`: 
+     -  `Oxford_03.txt`: 
+     -  `IELTS_01.txt`:
+     -  `IELTS_02.txt`:
+     -  `IELTS_03.txt`:
+     -  `GRE_01.txt`:
+     -  `GRE_02.txt`:
+     -  `GRE_03.txt`:
+     -  `User_Info.txt`:
   
    6. Proper indentation and naming styles
    
