@@ -131,25 +131,25 @@
    - File Output: In scoring mode. After the game is over, the `Playerlist` will be updated automatically with the name, password current highest score. All the records will be saved in `User_Info txt`. 
     
    5. Program codes in multiple files:
-         `gp.h`: Concludes all the functions we used.
-         `main.cpp`: The entrance of the game and welcome the players.
-         `MainPage.cpp`: The mainpage of the game, let players to choose next step.
-         `ClassicMode.cpp`: The implementation of Classic Mode of the game.
-         `ScoringMode.cpp`: The implementation of Scoring Mode of the game.
-         `DisplayClassic.cpp`: Drawing of the hangman in classic mode.
-         `DisplayScoring.cpp`: Drawing of the hangman in scoring mode.
-         `Menu.cpp`: Display the introduction and rules of the game.
-         `RandomWord.cpp`: Choose a random word from the word banks.
-         `Oxford_01.txt`: Contains words with 5 characters in the range of Oxford.
-         `Oxford_02.txt`: Contains words with 6 characters in the range of Oxford.
-         `Oxford_03.txt`: Contains words with 7 characters in the range of Oxford.
-         `IELTS_01.txt`: Contains words with 5 characters in the range of IELTS.
-         `IELTS_02.txt`: Contains words with 6 characters in the range of IELTS.
-         `IELTS_03.txt`: Contains words with 7 characters in the range of IELTS.
-         `GRE_01.txt`: Contains words with 5 characters in the range of GRE.
-         `GRE_02.txt`: Contains words with 6 characters in the range of GRE.
-         `GRE_03.txt`: Contains words with 7 characters in the range of GRE.
-         `User_Info.txt`: Stores the information of players
+        - `gp.h`: Concludes all the functions we used.
+        - `main.cpp`: The entrance of the game and welcome the players.
+        - `MainPage.cpp`: The mainpage of the game, let players to choose next step.
+        - `ClassicMode.cpp`: The implementation of Classic Mode of the game.
+        - `ScoringMode.cpp`: The implementation of Scoring Mode of the game.
+        - `DisplayClassic.cpp`: Drawing of the hangman in classic mode.
+        - `DisplayScoring.cpp`: Drawing of the hangman in scoring mode.
+        - `Menu.cpp`: Display the introduction and rules of the game.
+        - `RandomWord.cpp`: Choose a random word from the word banks.
+        - `Oxford_01.txt`: Contains words with 5 characters in the range of Oxford.
+        - `Oxford_02.txt`: Contains words with 6 characters in the range of Oxford.
+        - `Oxford_03.txt`: Contains words with 7 characters in the range of Oxford.
+        - `IELTS_01.txt`: Contains words with 5 characters in the range of IELTS.
+        - `IELTS_02.txt`: Contains words with 6 characters in the range of IELTS.
+        - `IELTS_03.txt`: Contains words with 7 characters in the range of IELTS.
+        - `GRE_01.txt`: Contains words with 5 characters in the range of GRE.
+        - `GRE_02.txt`: Contains words with 6 characters in the range of GRE.
+        - `GRE_03.txt`: Contains words with 7 characters in the range of GRE.
+        - `User_Info.txt`: Stores the information of players
   
    6. Proper indentation and naming styles
    
