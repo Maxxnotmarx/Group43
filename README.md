@@ -131,14 +131,14 @@ Commands for lines of input:
    - File Output: In scoring mode. After the game is over, the `Playerlist` will be updated automatically with the name, password current highest score. All the records will be saved in `User_Info txt`. 
     
    5. Program codes in multiple files:
-     -  `gp.h`: 
-     -  `main.cpp`: 
-     -  `MainPage.cpp`: 
-     -  `ClassicMode.cpp`: 
-     -  `ScoringMode.cpp`: 
-     -  `DisplayClassic.cpp`: 
-     -  `DisplayScoring.cpp`: 
-     -  `Menu.cpp`:
+     -  `gp.h`
+     -  `main.cpp`
+     -  `MainPage.cpp`
+     -  `ClassicMode.cpp`
+     -  `ScoringMode.cpp`
+     -  `DisplayClassic.cpp`
+     -  `DisplayScoring.cpp`
+     -  `Menu.cpp`
      -  `RandomWord.cpp`:
      -  `Oxford_01.txt`: 
      -  `Oxford_02.txt`: 
