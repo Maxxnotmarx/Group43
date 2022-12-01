@@ -164,4 +164,4 @@
    - `make clean`: remove the built files.
 
 ## Video link
-   `https://github.com/Maxxnotmarx/Group43.git`
+   `https://youtu.be/ITAVtdp0kHs`
