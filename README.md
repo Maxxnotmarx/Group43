@@ -89,7 +89,13 @@ Commands for lines of input:
                                            ||                                  
                                            ||__________________________________
         
-        word in each round is generated: 1-3: Oxford 3500 5-7 characted-long word; 4-6: IELTS 5-7 characted-long word; 7-9: IELTS 5-7 characted-long word. As you can see, the difficulty of guessing out the word increases as you guess out more words.    
+        word in each round is generated: 
+        - 1-3: Oxford 3500 5-7 characted-long word; 
+        - 4-6: IELTS 5-7 characted-long word; 
+        - 7-9: IELTS 5-7 characted-long word. 
+       
+        Keep cycling until the end of the game
+        
         
 Commands for lines of input:
 
