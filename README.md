@@ -56,17 +56,17 @@
      - 6 character-long; 
      - 7 character-long. 
 
-Commands for lines of input:
+     Commands for lines of input:
 
-      Hint(?): Player has unlimited chances of obtaining a hint, which will directly fill one character of the word in the blank each time, press "?" to do so. However, the player is not suggested to use too many of them in order to keep the game challenging.
+            Hint(?): Player has unlimited chances of obtaining a hint, which will directly fill one character of the word in the blank each time, press "?" to do so. However, the player is not suggested to use too many of them in order to keep the game challenging.
       
-      Quit(Q): Quit the game any time during the on-going round of guess
+            Quit(Q): Quit the game any time during the on-going round of guess
 
-      Return(R): Return to the Mainpage, current game status will not be saved.
+            Return(R): Return to the Mainpage, current game status will not be saved.
 
-      Guess(a-z): Guess should be inputted with lower case of the character.
+            Guess(a-z): Guess should be inputted with lower case of the character.
 
-      Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
+            Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
       
    
    3) Scoring Mode:
@@ -97,17 +97,17 @@ Commands for lines of input:
         Keep cycling until the end of the game
         
         
-Commands for lines of input:
+        Commands for lines of input:
 
-      i) Hint(?): Player has 5 hints in total, function the same as the one in Classic Mode.
+            Hint(?): Player has 5 hints in total, function the same as the one in Classic Mode.
       
-      ii) Quit(Q): Quit the game any time during the on-going round of guessing, current score will not be saved.
+            Quit(Q): Quit the game any time during the on-going round of guessing, current score will not be saved.
 
-      iii) Return(R): Return to the Mainpage, current game status and current socre will not be saved.
+            Return(R): Return to the Mainpage, current game status and current socre will not be saved.
 
-      iv) Guess(a-z): Guess should be inputted with lower case of the character.
+            Guess(a-z): Guess should be inputted with lower case of the character.
       
-      v) Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
+            Invalid Input: Any input that does not match with the above inputs of command, the program will let you input again.
       
 ## Features(Coding Requirement):
     
