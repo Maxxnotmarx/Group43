@@ -157,4 +157,8 @@
   
    8. In-code documentation
 
+## Compilation instruction
     
+   - `make main`
+   - `./main`
+   - `make clean`
