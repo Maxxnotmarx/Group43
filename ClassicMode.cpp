@@ -89,7 +89,7 @@ void Classic(){
 		}
 	}
 
-	word = RandomWord( file ); // Get the word of corresponding vocabulary and difficulty level
+	word = RandomWord( file ); // Get the word of corresponding vocabulary and word length
 
 	// The game starts
 	output.push_back( "____________" );
