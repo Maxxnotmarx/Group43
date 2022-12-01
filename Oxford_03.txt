@@ -38,6 +38,5 @@ release
 section
 session
 setting
-seventy
 trouble
 vehicle
