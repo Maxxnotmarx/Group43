@@ -162,3 +162,6 @@
    - `make main`: compile main with all functions.
    - `./main`: Execute the game.
    - `make clean`: remove the built files.
+
+## Video link
+   `https://github.com/Maxxnotmarx/Group43.git`
