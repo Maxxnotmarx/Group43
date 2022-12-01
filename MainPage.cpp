@@ -11,7 +11,6 @@ using namespace std;
 void MainPage(){
 	char input;
 	cout << endl;
-	cout << "                           Welcome to Hangman 2022                        " << endl;
 	cout << "   -------------------------------Main Page-------------------------------" << endl;
 	cout << "   _______________________________________________________________________" << endl;
     	cout << "   ************  M: menu; E: enter the game; Q: quit the game;  **********" << endl;
