@@ -12,7 +12,7 @@
 using namespace std;
 
 
-// Enter the classic game mode
+// Enter the classic game mode when the Classic() function is called
 void Classic(){
 	int times = 0;
 	vector < char > guessed;
