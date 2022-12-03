@@ -14,7 +14,7 @@ struct Player{
 	int score;
 };
 
-// enter the scoring mode, no paramter input
+// enter the scoring mode when Scoring() function is called
 void Scoring(){
     
 	Player *playerList;    // create a dynamic array to store the information of the players
