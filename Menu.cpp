@@ -3,6 +3,7 @@
 #include <iostream>
 using namespace std;
 
+// Print the game menu when the menu() function is called
 void menu() {
     
     cout << "  ------------------------Hello! Welcome to the HANGMAN game!----------------------" << endl;
