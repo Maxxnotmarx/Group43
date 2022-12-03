@@ -7,7 +7,7 @@
 
 using namespace std;
 
-// MainPage function
+// Enter main page of the game when Mainpage() function is called
 void MainPage(){
 	char input;
 	cout << endl;
