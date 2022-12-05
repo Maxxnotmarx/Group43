@@ -472,7 +472,7 @@ void Scoring(){
     	       	char see_ranking;
 	        string temp_name,temp_password;
 		int temp;
-		cout<<"Do you want to see the ranking? 1: yes; 0: no; quit: any other character "<<endl;
+		cout<<"Do you want to see the ranking? 1: yes; 0: no; Quit: any other character "<<endl;
 	        cin>>see_ranking;
 		
     		// if the player wants to see the ranking
