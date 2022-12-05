@@ -158,10 +158,12 @@
    7. In-code documentation
 
 ## Compilation instruction
-    
-   - `make main`: compile main with all functions.
+
+   - `git clone https://github.com/Maxxnotmarx/Group43.git`: Download the repository from Github.
+   - `cd Group43`: Go to the repository.
+   - `make main`: Compile main with all functions.
    - `./main`: Execute the game.
-   - `make clean`: remove the built files.
+   - `make clean`: Remove the built files.
 
 ## Video link
    `https://youtu.be/ITAVtdp0kHs`
