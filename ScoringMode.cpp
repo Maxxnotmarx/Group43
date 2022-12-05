@@ -472,7 +472,7 @@ void Scoring(){
     	       	char see_ranking;
 	        string temp_name,temp_password;
 		int temp;
-		cout<<"Do you want to see the ranking? 1: yes; 0: no "<<endl;
+		cout<<"Do you want to see the ranking? 1: yes; 0: no; quit: any other character "<<endl;
 	        cin>>see_ranking;
 		
     		// if the player wants to see the ranking
@@ -539,9 +539,6 @@ void Scoring(){
 			}
 		}
 	        else{
-			if (see_ranking!='0'){
-				cout<<"Invalid input!"<<endl;
-			}
                 	cout<<"Bye bye!"<<endl;
 			// store the new information into the User_Info.txt
 			ofstream fout;
