@@ -3,9 +3,6 @@
 #ifndef GP_H
 #define GP_H
 
-#include <fstream>
-#include <vector>
-
 using namespace std;
 
 void Classic();
