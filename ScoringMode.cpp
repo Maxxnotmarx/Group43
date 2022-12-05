@@ -514,9 +514,7 @@ void Scoring(){
 			}
 			fout.close();
 		        delete [] playerList;
-		    
-                	break; //game over
-			
+		    			
 			char whether_to_play_again;
 			cout << "_________________________________________________________" << endl;
 		        cout << "   Do you want to play for another round? Y: Yes N: No   " << endl;
