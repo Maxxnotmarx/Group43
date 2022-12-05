@@ -506,6 +506,17 @@ void Scoring(){
                     	cout<<"*** End of this round ***"<<endl;
 			cout<<"*************************"<<endl;
 			
+			// store the new information into the User_Info.txt
+			ofstream fout;
+		        fout.open("User_Info.txt");
+		        for (int z=0;z<size;z++){
+	    			fout<<playerList[z].name<<";"<<playerList[z].password<<"|"<<playerList[z].score<<endl;
+			}
+			fout.close();
+		        delete [] playerList;
+		    
+                	break; //game over
+			
 			char whether_to_play_again;
 			cout << "_________________________________________________________" << endl;
 		        cout << "   Do you want to play for another round? Y: Yes N: No   " << endl;
@@ -531,18 +542,17 @@ void Scoring(){
 		}
 	        else{
                 	cout<<"Bye bye!"<<endl;
-		}
-
-		// store the new information into the User_Info.txt
-		ofstream fout;
-	        fout.open("User_Info.txt");
-	        for (int z=0;z<size;z++){
-    			fout<<playerList[z].name<<";"<<playerList[z].password<<"|"<<playerList[z].score<<endl;
-		}
-		fout.close();
-	        delete [] playerList;
+			// store the new information into the User_Info.txt
+			ofstream fout;
+	        	fout.open("User_Info.txt");
+		        for (int z=0;z<size;z++){
+	    			fout<<playerList[z].name<<";"<<playerList[z].password<<"|"<<playerList[z].score<<endl;
+			}
+			fout.close();
+		        delete [] playerList;
 		    
-                break; //game over
+                	break; //game over
+		}
             }
         }
     }
