@@ -539,6 +539,9 @@ void Scoring(){
 			}
 		}
 	        else{
+			if (see_ranking!='0'){
+				cout<<"Invalid input!"<<endl;
+			}
                 	cout<<"Bye bye!"<<endl;
 			// store the new information into the User_Info.txt
 			ofstream fout;
